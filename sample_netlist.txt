@@ -1,0 +1,46 @@
+# FPGA Placement Simulator Sample Netlist
+
+# Logic cells
+LUT6 lut0
+LUT6 lut1
+LUT6 lut2
+LUT6 lut3
+LUT6 lut4
+LUT6 lut5
+LUT6 lut6
+LUT6 lut7
+
+# Flip-flops
+FDRE ff0
+FDRE ff1
+FDRE ff2
+FDRE ff3
+
+# DSP blocks
+DSP48E1 dsp0
+DSP48E1 dsp1
+
+# Block RAM
+RAMB18E1 bram0
+
+# Connectivity
+NET n0 lut0 ff0
+NET n1 lut1 ff0
+NET n2 lut2 ff1
+NET n3 lut3 ff1
+
+NET n4 ff0 dsp0
+NET n5 ff1 dsp0
+
+NET n6 lut4 ff2
+NET n7 lut5 ff2
+
+NET n8 ff2 dsp1
+
+NET n9 lut6 ff3
+NET n10 lut7 ff3
+
+NET n11 ff3 dsp1
+
+NET n12 dsp0 bram0
+NET n13 dsp1 bram0
